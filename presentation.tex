@@ -7,7 +7,7 @@
 
 \begin{document}
 
-% frame 0: title frame
+\section{Title stuff}
 \begin{frame}
 
 \titlepage % The littery \maketitle but for beamer
@@ -15,7 +15,6 @@
 \end{frame}
 
 \section{early stuff}
-% frame 1: ---
 \begin{frame}
 
 \tableofcontents[currentsection]
@@ -29,10 +28,10 @@
 
 \end{frame}
 
+\section{columns stuff}
 \begin{frame}
 
-\tableofcontents[currentsection]
-\frametitle{The second frame}
+\frametitle{The column frame}
 
 \begin{columns}
 
@@ -45,13 +44,19 @@
 \end{itemize}
 \end{column}
 
-\begin{column}{0.6\textwidth}
+\begin{column}{0.4\textwidth}
 \begin{itemize}
 
 \item{third one}
 \item{fourth one}
 
 \end{itemize}
+\end{column}
+
+\begin{column}{0.2\textwidth}
+
+\tableofcontents[currentsection]
+
 \end{column}
 
 \end{columns}
