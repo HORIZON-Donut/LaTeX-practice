@@ -1,4 +1,3 @@
 #!/bin/bash
 
-cd build
-latexmk -pdf ../document.tex -pvc
+latexmk -outdir=build/ -pdf document.tex -pvc
