@@ -1,3 +1,3 @@
 #!/bin/bash
 
-latexmk -auxdir=build/ -outdir=. -pdf document.tex -pvc
+latexmk -jobname=practice_note -auxdir=build/ -outdir=. -pdf document.tex -pvc
