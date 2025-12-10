@@ -1,3 +1,3 @@
 #!/bin/bash
 
-latexmk -outdir=build/ -pdf document.tex -pvc
+latexmk -auxdir=build/ -outdir=. -pdf document.tex -pvc
