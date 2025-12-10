@@ -2,6 +2,7 @@
 
 \usepackage{graphicx} % Import package for putting graphic or image in the document
 \usepackage{caption} % Import package for caption outside float figure
+\usepackage{tabularx} % Import package for table stuff
 
 \title{The document of practice}
 \author{Auhoru, M(moderator) Horizon}
@@ -14,7 +15,8 @@
 This is the document that use to practice on \LaTeX\ by following a documentation provide by a website, Overleaf.
 \end{abstract}
 
-\section{Exercise}
+\section{First Exercise: Typing a text and produce correct output}
+\label{sec:essay}
 
 In March 2006, Congress raised the ceiling an additional \$0.79 trillion to \$8.97 trillion, 
 which is approximately 68\% of GDP.
@@ -22,6 +24,8 @@ As of October 4, 2008,
 the ``Emergency Economic Stabilization Act of 2008'' raised the current debt ceiling to \$11.3 trillion.
 
 \section{Math Notation}
+\label{sec:nota}
+
 \subsection{example}
 
 Let $a$ and $b$ be distinc positive integer, and let $c = a + b$. And let $y = x - c$ be \ldots
@@ -41,15 +45,61 @@ S_n = \frac{1}n\sum_{i=1}^n X_i
 denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n (S_n - \mu)}$ converge in distribution
 to a normal $N(0, \sigma)^2$.
 
+\section{Labels and Cross-Referrences}
+\label{sec:lebel}
+This section is a show case of using \textbackslash label inside source file \\
+This section are labeled as `lebel'\\
+\\
+And this is the result of using \textbackslash ref inside document\\
+ - this one ref to \ref{sec:essay}\\
+ - this one ref to \ref{sec:nota}\\
+ - this one ref to next section: \ref{sec:image}\\
+ - this one also ref to next next section: \ref{sec:table}\\
+
 \section{Graphic}
+\label{sec:image}
+
+\subsection{A normal one}
 The image saved from twitter:
 
-{\centering
-\includegraphics[width=0.5\textwidth]{../image/001.jpg}
+{
+\centering
+\includegraphics[width=0.5\textwidth]{../image/001}
 \captionof{figure}{A cute image as example}
-\par}
+\par
+}
 
+\subsection{A floating one}
+This one are the one that let \LaTeX\ decide where to put the image. Which, might be good or worse, depend on user (And mine is it's the worst since i am not yet learn how to control it)
 
-This can also doing with float but require some command to define position of the image
+\begin{figure}
+
+\centering
+\includegraphics[width=0.5\textwidth]{../image/002}
+\caption{A cute image for this example}
+
+\end{figure}
+
+\section{Table}
+\label{sec:table}
+\subsection{basic one}
+\begin{tabular}{lrr} % lrr stand for 'l'eft, 'r'ight, 'r'ight
+
+Item & Qty & Unit \$ \\
+Widget & 1 & 199.99 \\
+Gadget & 2 & 399.99 \\
+Cable & 3 & 19.99 \\
+
+\end{tabular}
+
+\subsection{The one with table frame}
+\begin{tabular}{|l|r|r|} \hline % Add | for vertical line and \hline for horizontal line
+
+Item & Qty & Unit \$ \\\hline
+Widget & 1 & 199.99 \\
+Gadget & 2 & 399.99 \\
+Cable & 3 & 19.99 \\\hline
+
+\end{tabular}
 
 \end{document}
